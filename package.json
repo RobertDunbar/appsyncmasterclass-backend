@@ -1,0 +1,21 @@
+{
+  "name": "appsyncmasterclass-backend",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Backend for Appsync Masterclass",
+  "main": "index.js",
+  "scripts": {
+    "sls": "severless"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobertDunbar/appsyncmasterclass-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobertDunbar/appsyncmasterclass-backend/issues"
+  },
+  "homepage": "https://github.com/RobertDunbar/appsyncmasterclass-backend#readme"
+}
