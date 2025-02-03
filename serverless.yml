@@ -1,0 +1,20 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: robertdunbar
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: appsyncmasterclass-backend
+service: appsyncmasterclass-backend
+
+plugins:
+ - severless-appsync-plugin
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+package:
+  exclude:
+    - package-lock.json
+    - package.json
+
+custom:
+   - ${file(serverless.appsync-api.yml)}
