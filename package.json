@@ -5,7 +5,7 @@
   "description": "Backend for Appsync Masterclass",
   "main": "index.js",
   "scripts": {
-    "sls": "severless"
+    "sls": "serverless"
   },
   "repository": {
     "type": "git",
