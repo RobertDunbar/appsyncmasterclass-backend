@@ -1,0 +1,75 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    getMyProfile: MyProfile!
+
+    getProfile(screeName: String!): OtherProfile!
+
+    getTweets(userID: ID!, limit: Int!, nextToken: String): TweetsPage!
+}
+
+type Mutation {
+
+}
+
+interface IProfile {
+    id: ID!
+    name: String!
+    screeName: String!
+    imageUrl: AWSURL
+    backgroundImageUrl: AWSURL
+    bio: String
+    location: String
+    website: AWSURL
+    birthday: AWSDate
+    createdAt: AWSDateTime!
+    tweets: TweetsPage!
+    followersCount: Int!
+    followingCount: Int!
+}
+
+type MyProfile implements IProfile {
+    id: ID!
+    name: String!
+    screeName: String!
+    imageUrl: AWSURL
+    backgroundImageUrl: AWSURL
+    bio: String
+    location: String
+    website: AWSURL
+    birthday: AWSDate
+    createdAt: AWSDateTime!
+    tweets: TweetsPage!
+    followersCount: Int!
+    followingCount: Int!
+    tweetsCount: Int!
+    likesCount: Int!
+}
+
+type OtherProfile implements IProfile {
+     id: ID!
+    name: String!
+    screeName: String!
+    imageUrl: AWSURL
+    backgroundImageUrl: AWSURL
+    bio: String
+    location: String
+    website: AWSURL
+    birthday: AWSDate
+    createdAt: AWSDateTime!
+    tweets: TweetsPage!
+    followersCount: Int!
+    followingCount: Int!
+    tweetsCount: Int!
+    likesCount: Int!
+    following: Boolean!
+    followedBy: Boolean!
+}
+
+type TweetsPage {
+    tweets: [Tweet!]
+    nextToken: String
+}
